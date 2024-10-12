@@ -1,11 +1,16 @@
 {
   "name": "week-18",
   "private": true,
+  "prisma": {
+    "schema": "packages/db/prisma/schema.prisma"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:migrate:dev": "turbo run db:migrate:dev",
+    "db:push": "turbo run db:push"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
